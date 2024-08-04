@@ -14,6 +14,9 @@ Initialize on current Folder:
 Initialize on target folder: 
 - `pyprojinit init --output target_folder/`
 
+Initialize on with a project name and a target folder: 
+- `pyprojinit init --name myproject1 --output target_folder/`
+
 ## Files created
 
 The CLI will create the following files and folder structure:
