@@ -63,7 +63,7 @@ def init(name: str, output: str):
         write_bytes(f'{output}/{name}/cmd/root.py', ROOT_PY)
 
         if output != ".":
-            click.echo(f"New project iniatialize at: {output}")
+            click.echo(f"New project iniatialized at: {output}")
         else:
             click.echo("New project inialized")
 

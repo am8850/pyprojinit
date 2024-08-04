@@ -19,10 +19,10 @@ Initialize on target folder:
 The CLI will create the following files and folder structure:
 
 ```text
-<package>/__init__.py
-<package>/version.py
-<package>/cmd/__init__.py
-<package>/cmd/root.py
+<package_name>/__init__.py
+<package_name>/version.py
+<package_name>/cmd/__init__.py
+<package_name>/cmd/root.py
 LICENSE
 README
 pyproject.toml
