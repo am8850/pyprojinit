@@ -48,6 +48,57 @@ Creating folder myproj1
 New project iniatialize at: myproj1
 ```
 
+## Generated `pyproject.toml` file
+
+```toml
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "myproject1"
+authors = [
+  { name="Name", email="name@email.com" },
+]
+description = "Description for myproject1"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.10, <3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+  "click",
+  "fastapi",
+  "unvicorn[standard]"
+]
+
+dynamic = ["version"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = {attr = "myproject1.version.VERSION"}
+readme = {file = ["README.md"]}
+
+[tool.setuptools.packages.find]
+include = ["myproject1*"]
+exclude = ["*.tests*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+"myproject1" = ["*.*"]
+
+[project.urls]
+"Homepage" = "https://github/usernane/repo"
+
+[project.scripts]
+myproject1 = "myproject1.cmd.root:main"
+```
 
 ## `build.sh`
 
