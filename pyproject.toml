@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyprojinit"
+authors = [
+  { name="Alex Morales", email="am8850mia@gmail.com" },
+]
+description = "A simple pyproject.toml initiator"
+readme = "README.md"
+requires-python = ">=3.10, <3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "click",
+    "build"
+]
+
+dynamic = ["version"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = {attr = "pyprojinit.version.VERSION"}
+readme = {file = ["README.md"]}
+
+[tool.setuptools.packages.find]
+include = ["pyprojinit*"]
+exclude = ["*.tests*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+"pyprojinit" = ["*.*"]
+
+[project.urls]
+"Homepage" = "https://github.com/am8850/pyprojinit"
+
+[project.scripts]
+pyprojinit = "pyprojinit.cli:main"
