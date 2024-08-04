@@ -2,6 +2,10 @@
 
 A CLI to initialize a simple Python pyproject.toml file with a simple executable CLI that can launch a web UI.
 
+## Installation
+
+`pip install pyprojinit`
+
 ## Usage
 
 Initialize on current Folder:
