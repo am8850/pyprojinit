@@ -19,7 +19,7 @@ Initialize on with a project name and a target folder:
 
 ## Files created
 
-The CLI will create the following files and folder structure:
+The CLI will create the following files and folder structure locally or at the target folder:
 
 ```text
 <package_name>/__init__.py
