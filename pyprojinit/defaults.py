@@ -1,5 +1,5 @@
-LICENSE = "MIT License"
-README = "Update this README.md with instructions for your package"
+LICENSE_TXT = "MIT License"
+README_MD = "Update this README.md with instructions for your package"
 MANIFEST = "include-recursive <name>/web/ui *"
 PYPROJECT = '''[build-system]
 requires = ["setuptools", "setuptools-scm"]
@@ -47,7 +47,7 @@ namespaces = false
 <name> = "<name>.cmd.root:main"
 '''
 
-BUILD='''# Build and install the package locally
+BUILD_SCRIPT='''# Build and install the package locally
 python -m build && pip install -e .
 
 # Test the package

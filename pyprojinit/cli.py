@@ -35,11 +35,11 @@ def init(name: str, output: str):
             click.echo(f'Creating folder {output}')
             os.makedirs(output, exist_ok=True)
         # # Create file from text
-        write_bytes(f'{output}/LICENSE', LICENSE)
-        write_bytes(f'{output}/README.md', README)
+        write_bytes(f'{output}/LICENSE', LICENSE_TXT)
+        write_bytes(f'{output}/README.md', README_MD)
         #write_bytes(f'{output}/MANIFEST.in', defaults.MANIFEST.replace("<name>", name))
         write_bytes(f'{output}/setup.py', 'from setuptools import setup\nsetup()')
-        write_bytes(f'{output}/build.sh', BUILD.replace("<name>", name))
+        write_bytes(f'{output}/build.sh', BUILD_SCRIPT.replace("<name>", name))
 
         deps = ''
         if packages.strip() != '':
