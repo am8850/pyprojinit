@@ -25,6 +25,23 @@ pyproject.toml
 setup.py
 buid.sh
 ```
+## Sample Output
+
+```text
+ pyprojinit init --output myproj1
+PyProjInit CLI
+Package name [mypackage]: myproject1
+Description [My package]: Description for myproject1
+Author [Name]: 
+Author email [name@email.com]: 
+Homepage [https://github/usernane/repo]: 
+Comma separated packages (space=None) [click, fastapi, unvicorn[standard]]: 
+Creating package myproject1 in folder myproj1 with author Name and email name@email.com
+Creating folder myproj1
+New project iniatialize at: myproj1
+```
+
+
 ## `build.sh`
 
 `build.sh` is a useful bash script to start the build process and deploy the package locally in editable mode.
