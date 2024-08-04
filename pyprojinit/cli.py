@@ -55,13 +55,16 @@ def init(name: str, output: str):
         proj_toml= PYPROJECT.replace("<name>", name).replace("<author>", author).replace("<email>", email).replace("<DEPS>", deps).replace("<home_page>", homepage).replace("<description>", description)
         write_bytes(f'{output}/pyproject.toml', proj_toml)        
 
+        # Create the project files        
         os.makedirs(f'{output}/{name}', exist_ok=True)
         write_text(f'{output}/{name}/__init__.py','')
         write_bytes(f'{output}/{name}/version.py', VERSION_PY)
+
         os.makedirs(f'{output}/{name}/cmd', exist_ok=True)
         write_text(f'{output}/{name}/cmd/__init__.py','from .root import *')
         write_bytes(f'{output}/{name}/cmd/root.py', ROOT_PY)
 
+        # report creation
         if output != ".":
             click.echo(f"New project iniatialized at: {output}")
         else:
