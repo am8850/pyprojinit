@@ -62,6 +62,11 @@ def init(name: str, output: str):
         write_text(f'{output}/{name}/cmd/__init__.py','from .root import *')
         write_bytes(f'{output}/{name}/cmd/root.py', ROOT_PY)
 
+        if output != ".":
+            click.echo(f"New project iniatialize at: {output}")
+        else:
+            click.echo("New project inialized")
+
 def main():
     cli()
 
